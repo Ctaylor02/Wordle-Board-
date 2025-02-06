@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+} 
+
+
+
+.letter {
+    border: 1px solid black;
+    padding: 1px;
+    width: 40px;
+    height: 10px;
+    text-align: center;
+    background-color: grey;
+}
+
+
+.board {
+    margin: auto;
+    width: fit-content;
+
+} 
+
+h1 {
+    margin: 100px auto;
+    width: fit-content;
+}
+
+.invisible {
+    border: 1px solid black;
+    padding: 1px;
+    width: 40px;
+    height: 10px;
+    text-align: center;
+    color: white;
+    
+}
+
+.qwerty table {
+    margin: 30px auto;
+    width: fit-content;
+    table-layout: fixed;
+    /* border-collapse: collapse; */
+   
+
+}
+
+
+.keyboard {
+    border: 1px solid black;
+    padding: 5px;
+    width: 40px;
+    height: 10px;
+    text-align: center;
+    min-width: 40px;
+    max-width: 40px;
+    background-color: lightgrey;
+    border-radius: 20px;
+}
+
+.large-key {
+    width: 80px;
+    min-width: 80px; 
+    max-width: 80px;
+}
+
+.qwerty table tbody tr:nth-child(2) {
+    margin-left: 20px; /* Moves the second row to the right */
+    display: inline-block;
+}
+
+.row4 {
+    background-color: green;
+}
+
+.Cyellow {
+    background-color: yellow;
+}
+
+.Rgreen {
+    background-color: green;
+}
+
+.Ogreen {
+    background-color: green;
+}
+
+.Ryellow {
+    background-color: yellow;
+}
+
+.Kgreen {
+    background-color: green;
+}
+
+
+.green {
+    background-color: green;
+}
+
+.dark {
+    background-color: grey;
+}
+
+.container {
+    border: 1px solid black;
+    margin: 0 400px; 
+}
+
+
+
+
+
