@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle Board</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .board {
+            display: grid;
+            grid-template-rows: repeat(8, 1fr);
+            gap: 5px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+
+        .keyboard {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .key-row {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-bottom: 5px;
+        }
+
+        .key {
+            width: 40px;
+            height: 50px;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: lightgray;
+        }
+
+        .key.special {
+            width: 90px; /* Twice the size of a regular key */
+        }
+    </style>
+</head>
+<body>
+
+<h1> Caleb's Wordle Board</h1>
+
+<div class="board">
+    
+    <div class="row">
+        
+            
+        
+        
+        
+        <div class="box" id="box-0-0">
+            P
+        </div>
+        
+        <div class="box" id="box-0-1">
+            L
+        </div>
+        
+        <div class="box" id="box-0-2">
+            A
+        </div>
+        
+        <div class="box" id="box-0-3">
+            N
+        </div>
+        
+        <div class="box" id="box-0-4">
+            T
+        </div>
+        
+        <div class="box" id="box-0-5">
+            S
+        </div>
+        
+    </div>
+    
+    <div class="row">
+        
+            
+        
+        
+        
+        <div class="box" id="box-1-0">
+            P
+        </div>
+        
+        <div class="box" id="box-1-1">
+            E
+        </div>
+        
+        <div class="box" id="box-1-2">
+            N
+        </div>
+        
+        <div class="box" id="box-1-3">
+            C
+        </div>
+        
+        <div class="box" id="box-1-4">
+            I
+        </div>
+        
+        <div class="box" id="box-1-5">
+            L
+        </div>
+        
+    </div>
+    
+    <div class="row">
+        
+            
+        
+        
+        
+        <div class="box" id="box-2-0">
+            P
+        </div>
+        
+        <div class="box" id="box-2-1">
+            Y
+        </div>
+        
+        <div class="box" id="box-2-2">
+            T
+        </div>
+        
+        <div class="box" id="box-2-3">
+            H
+        </div>
+        
+        <div class="box" id="box-2-4">
+            O
+        </div>
+        
+        <div class="box" id="box-2-5">
+            N
+        </div>
+        
+    </div>
+    
+    <div class="row">
+        
+            
+        
+        
+        
+        <div class="box" id="box-3-0">
+            P
+        </div>
+        
+        <div class="box" id="box-3-1">
+            A
+        </div>
+        
+        <div class="box" id="box-3-2">
+            P
+        </div>
+        
+        <div class="box" id="box-3-3">
+            E
+        </div>
+        
+        <div class="box" id="box-3-4">
+            R
+        </div>
+        
+        <div class="box" id="box-3-5">
+            S
+        </div>
+        
+    </div>
+    
+    <div class="row">
+        
+            
+        
+        
+        
+        <div class="box" id="box-4-0">
+            P
+        </div>
+        
+        <div class="box" id="box-4-1">
+            U
+        </div>
+        
+        <div class="box" id="box-4-2">
+            R
+        </div>
+        
+        <div class="box" id="box-4-3">
+            P
+        </div>
+        
+        <div class="box" id="box-4-4">
+            L
+        </div>
+        
+        <div class="box" id="box-4-5">
+            E
+        </div>
+        
+    </div>
+    
+    <div class="row">
+        
+            
+        
+        
+        
+        <div class="box" id="box-5-0">
+             
+        </div>
+        
+        <div class="box" id="box-5-1">
+             
+        </div>
+        
+        <div class="box" id="box-5-2">
+             
+        </div>
+        
+        <div class="box" id="box-5-3">
+             
+        </div>
+        
+        <div class="box" id="box-5-4">
+             
+        </div>
+        
+        <div class="box" id="box-5-5">
+             
+        </div>
+        
+    </div>
+    
+    <div class="row">
+        
+            
+        
+        
+        
+        <div class="box" id="box-6-0">
+             
+        </div>
+        
+        <div class="box" id="box-6-1">
+             
+        </div>
+        
+        <div class="box" id="box-6-2">
+             
+        </div>
+        
+        <div class="box" id="box-6-3">
+             
+        </div>
+        
+        <div class="box" id="box-6-4">
+             
+        </div>
+        
+        <div class="box" id="box-6-5">
+             
+        </div>
+        
+    </div>
+    
+    <div class="row">
+        
+            
+        
+        
+        
+        <div class="box" id="box-7-0">
+             
+        </div>
+        
+        <div class="box" id="box-7-1">
+             
+        </div>
+        
+        <div class="box" id="box-7-2">
+             
+        </div>
+        
+        <div class="box" id="box-7-3">
+             
+        </div>
+        
+        <div class="box" id="box-7-4">
+             
+        </div>
+        
+        <div class="box" id="box-7-5">
+             
+        </div>
+        
+    </div>
+    
+</div>
+
+<!-- Keyboard -->
+<div class="keyboard">
+    
+    
+    <div class="key-row">
+        
+        <div class="key" id="letter-q">Q</div>
+        
+        <div class="key" id="letter-w">W</div>
+        
+        <div class="key" id="letter-e">E</div>
+        
+        <div class="key" id="letter-r">R</div>
+        
+        <div class="key" id="letter-t">T</div>
+        
+        <div class="key" id="letter-y">Y</div>
+        
+        <div class="key" id="letter-u">U</div>
+        
+        <div class="key" id="letter-i">I</div>
+        
+        <div class="key" id="letter-o">O</div>
+        
+        <div class="key" id="letter-p">P</div>
+        
+    </div>
+    
+    <div class="key-row">
+        
+        <div class="key" id="letter-a">A</div>
+        
+        <div class="key" id="letter-s">S</div>
+        
+        <div class="key" id="letter-d">D</div>
+        
+        <div class="key" id="letter-f">F</div>
+        
+        <div class="key" id="letter-g">G</div>
+        
+        <div class="key" id="letter-h">H</div>
+        
+        <div class="key" id="letter-j">J</div>
+        
+        <div class="key" id="letter-k">K</div>
+        
+        <div class="key" id="letter-l">L</div>
+        
+    </div>
+    
+
+    <!-- Last row with Backspace and Enter -->
+    <div class="key-row">
+        <div class="key special" id="key-enter">Enter</div>
+        
+        <div class="key" id="letter-z">Z</div>
+        
+        <div class="key" id="letter-x">X</div>
+        
+        <div class="key" id="letter-c">C</div>
+        
+        <div class="key" id="letter-v">V</div>
+        
+        <div class="key" id="letter-b">B</div>
+        
+        <div class="key" id="letter-n">N</div>
+        
+        <div class="key" id="letter-m">M</div>
+        
+        <div class="key special" id="key-backspace">⌫</div>
+    </div>
+</div>
+
+</body>
+</html>
