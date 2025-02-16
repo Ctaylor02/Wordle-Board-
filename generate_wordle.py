@@ -3,9 +3,9 @@
 from jinja2 import Environment, FileSystemLoader
 
 # Parameters
-num_guesses = 8  # Increased from 6 to 8
-word = "PYTHON"  # The word to be guessed (defines columns)
-guesses_so_far = ["PLANTS", "PENCIL", "PYTHON", "PAPERS", "PURPLE"]  # Added two more guesses
+num_guesses = 5  # Increased from 6 to 8
+word = "Region"  # The word to be guessed (defines columns)
+guesses_so_far = ["AUDITS", "UNISON"]  # Added two more guesses
 
 # Setup Jinja2
 env = Environment(loader=FileSystemLoader('.'))
