@@ -1,25 +1,24 @@
-#grade me part 2
-
+#
+import random
 from jinja2 import Environment, FileSystemLoader
 
-# Parameters
-num_guesses = 8  # Increased from 6 to 8
-word = "PYTHON"  # The word to be guessed (defines columns)
-guesses_so_far = ["PLANTS", "PENCIL", "PYTHON", "PAPERS", "PURPLE"]  # Added two more guesses
+# List of possible words
+word_list = ["HELLO", "WORLD", "APPLE", "CLOUD", "PYTHON", "LEMON", "TRAIN"]
 
-# Setup Jinja2
-env = Environment(loader=FileSystemLoader('.'))
+# Pick a random word
+word = random.choice(word_list)
+
+# Set up Jinja2
+env = Environment(loader=FileSystemLoader("."))
+
+# Load the template
 template = env.get_template("wordle_template.html")
 
-# Render the template
-output_html = template.render(
-    guesses=num_guesses,
-    word_length=len(word),
-    guesses_list=guesses_so_far
-)
+# Render with random word
+html_output = template.render(num_guesses=6, word=word, guesses=[])
 
-# Save the output
+# Save output
 with open("wordle_board.html", "w") as f:
-    f.write(output_html)
+    f.write(html_output)
 
-print("✅ Wordle board updated! Open 'wordle_board.html' in your browser.")
+print(f"✅ Wordle board generated with word: {word}")
