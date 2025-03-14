@@ -1,4 +1,4 @@
-//
+//grade me part 3
 document.addEventListener("DOMContentLoaded", function() {
     const board = document.getElementById("wordle-board");
     const keys = document.querySelectorAll(".key");

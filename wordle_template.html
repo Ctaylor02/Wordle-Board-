@@ -1,4 +1,4 @@
-<!--  -->
+<!-- grade me part 3  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,9 +33,21 @@
     <!-- Keyboard -->
     <div id="wordle-keyboard">
         <div class="keyboard-row">
-            {% for letter in "QWERTYUIOPASDFGHJKLZXCVBNM" %}
+            {% for letter in "QWERTYUIOP" %}
                 <button class="key" data-letter="{{ letter }}" id="letter-{{ letter }}">{{ letter }}</button>
             {% endfor %}
+        </div>
+        <div class="keyboard-row">
+            {% for letter in "ASDFGHJKL" %}
+                <button class="key" data-letter="{{ letter }}" id="letter-{{ letter }}">{{ letter }}</button>
+            {% endfor %}
+        </div>
+        <div class="keyboard-row">
+            {% for letter in "ZXCVBNM" %}
+                <button class="key" data-letter="{{ letter }}" id="letter-{{ letter }}">{{ letter }}</button>
+            {% endfor %}
+        </div>
+        <div class="keyboard-row">
             <button class="key enter" data-letter="Enter">Enter</button>
             <button class="key backspace" data-letter="Backspace">⌫</button>
         </div>

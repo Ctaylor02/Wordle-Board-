@@ -1,4 +1,6 @@
-/*  */
+/* grade me part 3  */
+
+/* Body and general styling */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -6,6 +8,7 @@ body {
     color: white;
 }
 
+/* Wordle board styling */
 #wordle-board {
     display: flex;
     flex-direction: column;
@@ -31,10 +34,19 @@ body {
     color: white;
 }
 
+/* Keyboard styling */
 #wordle-keyboard {
     margin-top: 20px;
 }
 
+/* Row for the keyboard keys */
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+/* Individual keys styling */
 .key {
     margin: 5px;
     padding: 10px 15px;
@@ -45,6 +57,7 @@ body {
     cursor: pointer;
 }
 
+/* Styling for special keys */
 .key.enter {
     background-color: green;
 }
